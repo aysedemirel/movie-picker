@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 //API
-import API from '../../API';
+import API from '../API';
 
 export const useHomeFetch = () => {
-    const [state, setState] = useState();
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
-
     const initialState = {
         page: 0,
         results: [],
         total_pages: 0,
         total_results: 0
     }
+    const [state, setState] = useState(initialState);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
 
     const fetchMovies = async (page, searchTerm = "") => {
         try {
