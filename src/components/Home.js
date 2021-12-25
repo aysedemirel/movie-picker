@@ -15,7 +15,7 @@ import { useHomeFetch } from '../hooks/useHomeFetch';
 import NoImage from '../images/no_image.jpg';
 
 const Home = () => {
-    const { state, loading, error } = useHomeFetch();
+    const { state, loading, error, setSearchTerm } = useHomeFetch();
     return (
         <div>
             {state.results[0] ? (
@@ -27,7 +27,7 @@ const Home = () => {
             )
                 : null
             }
-            <SearchBar/>
+            <SearchBar setSeacrhTerm={setSearchTerm}/>
             <Grid header='Popular Movies'>
                 {state.results.map(movie => (
                     <Thumb
@@ -42,7 +42,7 @@ const Home = () => {
                     />
                 ))}
             </Grid>
-            <Spinner/>
+            <Spinner />
         </div>
     );
 }

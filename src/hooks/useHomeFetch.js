@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 //API
 import API from '../API';
-
+const initialState = {
+    page: 0,
+    results: [],
+    total_pages: 0,
+    total_results: 0
+}
 export const useHomeFetch = () => {
-    const initialState = {
-        page: 0,
-        results: [],
-        total_pages: 0,
-        total_results: 0
-    }
+    const [searchTerm, setSearchTerm]  =useState('');
     const [state, setState] = useState(initialState);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -35,7 +35,7 @@ export const useHomeFetch = () => {
     }, []);
 
     return {
-        state, loading, error
+        state, loading, error, setSearchTerm
     };
 
 }

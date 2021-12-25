@@ -6,6 +6,19 @@ import searchIcon from '../../images/search-icon.svg';
 import { Wrapper, Content } from './SearchBar.styles'
 
 const SearchBar = ({ setSeacrhTerm }) => {
+    const [state, setState] = useState('');
+    const initial = useRef(true);
+
+    useEffect(() => {
+        if (initial.current) {
+            initial.current = false;
+            return;
+        }
+        const timer = setTimeout(() => { setSeacrhTerm(state); }, 500)
+
+        return () => clearTimeout(timer)
+    }, [setSeacrhTerm, state])
+
     return (
         <Wrapper>
             <Content>
@@ -13,6 +26,8 @@ const SearchBar = ({ setSeacrhTerm }) => {
                 <input
                     type='text'
                     placeholder="Search movie"
+                    onChange={event => setState(event.currentTarget.value)}
+                    value={state}
                 />
             </Content>
         </Wrapper>
