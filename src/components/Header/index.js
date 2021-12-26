@@ -12,7 +12,6 @@ const Header = () => (
             <Link to='/'>
                 <LogoImg src={RMDBLogo} alt='rmdb-logo'/>
             </Link>
-            
             <TMDBLogoImg src={TMDBLogo} alt='tmdb-logo' />
         </Content>
     </Wrapper>
