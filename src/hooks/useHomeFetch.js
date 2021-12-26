@@ -28,6 +28,7 @@ export const useHomeFetch = () => {
         } catch (error) {
             setError(true);
         }
+        setLoading(false);
     };
 
     // Initial and search
