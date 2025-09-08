@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/movie-picker/static/js/main.cdeae92f.js",
+    "static/media/no_image.jpg": "/movie-picker/static/media/no_image.22d2aa4d1af1a092666a.jpg",
+    "static/media/react-movie-logo.svg": "/movie-picker/static/media/react-movie-logo.42955eb6fcd32d2d228d0634c7cb7804.svg",
+    "static/media/tmdb_logo.svg": "/movie-picker/static/media/tmdb_logo.f15b66321d9915689a58f8372fa02398.svg",
+    "index.html": "/movie-picker/index.html",
+    "static/media/search-icon.svg": "/movie-picker/static/media/search-icon.cd820f5a55f7cd57d7131f1672d43473.svg",
+    "main.cdeae92f.js.map": "/movie-picker/static/js/main.cdeae92f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.cdeae92f.js"
+  ]
+}
