@@ -2,6 +2,7 @@
   "name": "react-rmdb",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aysedemirel.github.io/movie-picker/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
@@ -12,7 +13,7 @@
     "react-dom": "^16.14.0",
     "react-is": "^16.13.1",
     "react-router-dom": "^6.0.0-beta.8",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },
@@ -21,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "stop": "taskkill -F -IM node.exe"
+    "stop": "taskkill -F -IM node.exe",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "webpack": "^4.42.0"
+    "gh-pages": "^6.3.0",
+    "webpack": "^5.101.3"
   }
 }
